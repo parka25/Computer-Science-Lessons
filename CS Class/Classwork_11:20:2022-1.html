@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8"
+        <title>현재 시간</title>
+    </head>
+    <body> 
+        <div id="date_today2">
+            <p>지금 날짜는 <span id="date2"></span>
+              시간은 <span id="time2"></span> 입니다  </p>
+        </div>
+    </body>    
+    <script type="text/javascript">
+        // create a date object, representing this moment, and store it
+        let dateObj = new Date();
+ 
+        // format info about the day
+        let the_date = dateObj.getDate();
+        let the_month = dateObj.getMonth() + 1; // Add 1 because Jan is 0, etc.
+        let the_year = dateObj.getFullYear();
+        let current_date = the_month + "/" + the_date + "/" + the_year;
+  
+        // format info about the time
+        let the_hour = dateObj.getHours();
+        let the_minute = dateObj.getMinutes();
+        let the_second = dateObj.getSeconds();
+        let current_time = the_hour + ":" + the_minute + ":" + the_second;
+  
+        // insert the formatted strings into the document.
+        document.getElementById("date2").innerHTML = current_date;
+        document.getElementById("time2").innerHTML = current_time;
+    </script> 

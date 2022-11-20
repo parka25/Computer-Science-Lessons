@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8"
+        <title>The Universal Clock</title>
+    </head>
+    <body> 
+        <div class="date_today">
+            <p>You loaded this page on <span id="date1"></span>
+          at <span id="time1"></span></p>
+        </div>
+    </body>    
+    <script type="text/javascript">
+        let dateObj2 = new Date();  
+        let obj1 = new Date();
+        alert("obj1: "+obj1);
+        let obj2 = new Date();
+        alert("obj2: "+obj2);
+        let sec1 = obj1.getSeconds();
+        let sec2 = obj2.getSeconds();
+        alert("seconds in obj1: "+sec1+" and in obj2: "+sec2);
+        let diff = sec2 - sec1;
+        alert("difference is "+diff);
+        // The variable name tries to convey that this is a date object
+        /*document.getElementById("date1").innerHTML = "01/01/1870"
+        //document.getElementById("time1").innerHTML = "20:00"
+        let obj1 = new Date();
+        alert("obj1: "+obj1);
+        let sec1 = obj1.getSeconds();
+        let min1 = obj.getSeconds();
+        let hour1 = obj.getHours(); 
+        let year1 = obj1.getFullYear(); 
+        alert("The Current year is: "+year1);
+        alert("The Current hour is: "+hour1);
+        alert("The Current minute is: "+min1);
+        alert("The Current second is: "+sec1); */
+        
+    </script>
+</html>
